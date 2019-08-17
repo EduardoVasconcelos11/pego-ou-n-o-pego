@@ -1,0 +1,34 @@
+#tabela1{
+    width: 400px;	
+    height: 400px;
+    text-align: center;
+    float: left;
+}
+#tabela2{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    float: right;
+}
+#layout{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+
+}
+#foto{
+    margin-top: 50px;
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-left: 400px;
+}
+#butoes{
+    margin-top: -100px;
+    float: left;
+    width: 600px;
+    margin-left: 320px;
+}
+tr#trprincipal > td {
+    padding: 2px;
+}

@@ -3,44 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>Teste</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <style>
-        #tabela1{
-            width: 400px;	
-            height: 400px;
-            text-align: center;
-            float: left;
-        }
-        #tabela2{
-            width: 400px;
-            height: 400px;
-            text-align: center;
-            float: right;
-        }
-        #layout{
-            width: 1200px;
-            height: auto;
-            margin: auto;
-        
-        }
-        #foto{
-            margin-top: 50px;
-            width: 400px;
-            height: 400px;
-            float: left;
-            margin-left: 400px;
-        }
-        #butoes{
-            margin-top: -100px;
-            float: left;
-            width: 600px;
-            margin-left: 320px;
-        }
-        tr#trprincipal > td {
-            padding: 2px;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="{{ asset('css/lib/bootstrap/bootstrap.4.1.3.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
 </head>
 <body>
 
@@ -157,38 +122,6 @@
         </div>
     </div>
 
-    <script>
-        var dados = [
-            {nome: "Afonso", foto : "{{ asset('img/a.jpg') }}", votoPositivo: 0, votoNegativo: 0},
-            {nome: "Alonso", foto : "{{ asset('img/b.jpg') }}", votoPositivo: 0, votoNegativo: 0}
-        ];
-        indice = 0;
-        var foto = document.getElementById('imagem');
-        foto.src = dados[indice].foto;
-        
-        var positivo = 0
-        var negativo = 0
-        function atualizaIndice() {
-            indice = (indice == 0) ? 1 : 0;
-        }
-        function atualizaInfo() {
-            document.getElementById('pg').innerHTML = dados[indice].votoPositivo; 
-            document.getElementById('np').innerHTML = dados[indice].votoNegativo; 
-        }
-        function pego(){
-            dados[indice].votoPositivo += 1;
-            atualizaIndice();
-            atualizaInfo()
-            foto.src = dados[indice].foto;
-            console.log('pego', indice)
-        };
-        
-        function naoPego(){
-            dados[indice].votoNegativo += 1;
-            atualizaIndice();
-            atualizaInfo()
-            foto.src = dados[indice].foto;
-        };
-    </script>
+    <script src="{{ asset('js/functions.g.js') }}"></script>
 </body>
 </html>
